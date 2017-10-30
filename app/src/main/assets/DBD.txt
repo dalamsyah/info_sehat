@@ -1,1 +1,15 @@
-ini dbd
+DBD (Demam Berdarah Dengue) adalah penyakit yang disebabkan oleh gigitan nyamuk Aedes aegypty. Penyakit ini sering menyerang anak anak. Dikarenakan sistem imuninitas / daya tahan tubuh anak masih sangat rendah dibandingkan dengan sistem imunitas / daya tahan tubuh orang dewasa.
+Gejala DBD :
+Demam tinggi selama 2 – 7 hari
+Pendarahan dikulit / bintik merah pada kulit
+Muntah darah 
+
+Penyebab DBD :
+Kebersihan lingkungan
+Turunnya Imunitas tubuh
+Kualitas penampunagn air
+
+Pencegahan  DBD :
+Menjaga kebersihan lingkungan
+Melakukan penyemprotan berkala
+Melakukan penerapan 3M (menguras, menutup, mengubur)

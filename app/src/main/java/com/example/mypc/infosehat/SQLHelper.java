@@ -21,16 +21,14 @@ public class SQLHelper extends SQLiteOpenHelper{
         db.execSQL(sql);
 
         sql = "INSERT INTO penyakit (judul) VALUES " +
-                "('DIABETES'), " +
-                "('HIPERTENSI'), " +
-                "('KOLESTROL')," +
+                "('ASMA'), " +
+                "('DBD'), " +
+                "('DIABETES')," +
                 "('GINJAL')," +
-                "('TBC')," +
-                "('ASMA')," +
-                "('DBD')," +
+                "('HIPERTENSI')," +
+                "('LEPRA')," +
+                "('KOLESTROL')," +
                 "('MALARIA')," +
-                "('VERTIGO')," +
-                "('HEPATITIS')," +
                 "('TBC')";
         db.execSQL(sql);
     }

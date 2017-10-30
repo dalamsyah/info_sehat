@@ -4,10 +4,13 @@ import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
+import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,10 +19,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import android.widget.ZoomControls;
+
 public class Tentang extends AppCompatActivity {
     TextView textDetail;
     ImageView imageView;
-    ZoomLayout myZoomView;
+    ZoomControls zoom;
+    float x;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,17 +43,48 @@ public class Tentang extends AppCompatActivity {
                     "Problems: " + e.getMessage(), Toast.LENGTH_LONG).show();
         }
 
-        setContentView(myZoomView);
+        x = textDetail.getTextSize();
+        zoom.setOnZoomInClickListener(new View.OnClickListener() {
 
-    }
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                int w = imageView.getWidth();
+                int h = imageView.getHeight();
 
-        View infl = inflater.inflate(R.layout.activity_tentang, container, false);
-        ZoomLayout myZoomView = new ZoomLayout(this.getApplicationContext());
-        myZoomView.addView(infl);
-        return myZoomView;
+                textDetail.setTextSize(x++);
+
+                RelativeLayout.LayoutParams params =
+                        new RelativeLayout.LayoutParams(w + 10, h + 10);
+                params.addRule(RelativeLayout.CENTER_HORIZONTAL);
+
+                imageView.setLayoutParams(params);
+            }
+        });
+
+        zoom.setOnZoomOutClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                int w = imageView.getWidth();
+                int h = imageView.getHeight();
+
+                float b = textDetail.getTextSize();
+                textDetail.setTextSize(x--);
+
+                RelativeLayout.LayoutParams params =
+                        new RelativeLayout.LayoutParams(w - 10, h - 10);
+                params.addRule(RelativeLayout.CENTER_HORIZONTAL);
+
+                imageView.setLayoutParams(params);
+                //textDetail.setLayoutParams(params);
+            }
+        });
+
+
     }
 
     public void openFileText() throws IOException {
@@ -69,5 +106,6 @@ public class Tentang extends AppCompatActivity {
     private void init(){
         textDetail = (TextView)findViewById(R.id.txtdetailtentang);
         imageView = (ImageView)findViewById(R.id.imageViewtentang);
+        zoom = (ZoomControls) findViewById(R.id.zoomControlsTentang);
     }
 }

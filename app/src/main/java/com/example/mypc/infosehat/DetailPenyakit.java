@@ -4,9 +4,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ZoomControls;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,6 +21,9 @@ public class DetailPenyakit extends AppCompatActivity {
     ImageView imageView;
     SQLHelper sqlHelper;
     protected Cursor cursor;
+
+    ZoomControls zoom;
+    float x;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +54,47 @@ public class DetailPenyakit extends AppCompatActivity {
                     "Problems: " + e.getMessage(), Toast.LENGTH_LONG).show();
         }
 
+        x = textDetail.getTextSize();
+        zoom.setOnZoomInClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                int w = imageView.getWidth();
+                int h = imageView.getHeight();
+
+                textDetail.setTextSize(x++);
+
+                RelativeLayout.LayoutParams params =
+                        new RelativeLayout.LayoutParams(w + 10, h + 10);
+                params.addRule(RelativeLayout.CENTER_HORIZONTAL);
+
+                imageView.setLayoutParams(params);
+            }
+        });
+
+        zoom.setOnZoomOutClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                int w = imageView.getWidth();
+                int h = imageView.getHeight();
+
+                float b = textDetail.getTextSize();
+                textDetail.setTextSize(x--);
+
+                RelativeLayout.LayoutParams params =
+                        new RelativeLayout.LayoutParams(w - 10, h - 10);
+                params.addRule(RelativeLayout.CENTER_HORIZONTAL);
+
+                imageView.setLayoutParams(params);
+                //textDetail.setLayoutParams(params);
+            }
+        });
+
     }
 
     public void openFileText() throws IOException {
@@ -68,5 +115,6 @@ public class DetailPenyakit extends AppCompatActivity {
         textJudul = (TextView)findViewById(R.id.txtjudultentang);
         textDetail = (TextView)findViewById(R.id.txtdetail);
         imageView = (ImageView)findViewById(R.id.imageViewtentang);
+        zoom = (ZoomControls) findViewById(R.id.zoomControlsDetail);
     }
 }
