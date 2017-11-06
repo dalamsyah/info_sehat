@@ -27,7 +27,7 @@ public class SQLHelper extends SQLiteOpenHelper{
                 "('GINJAL')," +
                 "('HIPERTENSI')," +
                 "('LEPRA')," +
-                "('KOLESTROL')," +
+                "('KOLESTEROL')," +
                 "('MALARIA')," +
                 "('TBC')";
         db.execSQL(sql);

@@ -1,21 +1,25 @@
-Malaria adalah penyakit yang disebabkan oleh parasit bersel tunggal yang ditularkan melalui gigitan nyamuk anopheles betina yang menggigit pada malam hari. Ada 3 jenis penyakit malaria, yaitu :
-Malaria tropika (Plasmodium Falcifarum)
+Malaria adalah penyakit yang disebabkan oleh parasit bersel tunggal yang ditularkan melalui gigitan nyamuk anopheles betina yang menggigit pada malam hari. 
+
+Ada 3 jenis penyakit malaria, yaitu :
+1.  Malaria tropika (Plasmodium Falcifarum)
 Gejala : demam tidak menentu disertai nyeri kepala hebat
 Sifat penyakit : dapat sembuh total
 
-Malaria tertiana (Plasmdium vivax dan ovale)
+2.  Malaria tertiana (Plasmdium vivax dan ovale)
 Gejala : demam berkala yang timbul 3 hari sekali
-Sifat penyakit : sering kambuh
+Sifat penyakit : sering kambuh 
 
-Malaria kwartana (Plasmodium Malariae)
+3.  Malaria kwartana (Plasmodium Malariae)
 Gejala : demam berkala yang timbul 4 hari sekali
 Sifat penyakit : sering kambuh
 
 Gejala malaria:
-Demam berkala disertai menggigil
-Nyeri kepala dan nyeri otot
-Hati membesar, sehingga timbul rasa mual dan muntah
-Anemia/ kekurangan darah
+1.  Demam berkala disertai menggigil
+2.  Nyeri kepala dan nyeri otot
+3.  Anemia/ kekurangan darah
+4.  Hati membesar, sehingga timbul rasa mual dan muntah
 
 Pencegahan malaria :
-Pencegahan malaria adalah dengan mengkonsumsi obat obatan anti malaria jika kita berada di daerah rawan penyakit malaria dan meningkatkan sistem kekebalan tubuh.
+Dengan mengkonsumsi obat anti malaria jika kita berada di daerah rawan penyakit malaria dan meningkatkan sistem kekebalan tubuh.
+
+
